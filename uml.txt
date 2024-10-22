@@ -1,0 +1,42 @@
++-------------------+        +--------------------+        +--------------------+
+|      User         |        |    UserService     |        |  ProblemService     |
++-------------------+        +--------------------+        +--------------------+
+| - username: String|        | - users: Map       |        | - arraysProblems:   |
+| - password: String|        |                    |        |     List<Problem>   |
++-------------------+        +--------------------+        | - stringsProblems:  |
+| + getUsername(): String    | + register(): bool |        |     List<Problem>   |
+| + getPassword(): String    | + login(): bool    |        | - linkedListsProblems:|
++-------------------+        +--------------------+        |     List<Problem>   |
+                                                         | - stacksProblems:    |
+                                                         |     List<Problem>    |
+                                                         | - allProblems:       |
+                                                         |     List<Problem>    |
+                                                         +--------------------+
+                                                         | + getAllProblems(): |
+                                                         |     List<Problem>   |
+                                                         | + getProblemsByCategory|
+                                                         |     (category:String): |
+                                                         |     List<Problem>   |
+                                                         | + getRandomProblem(): |
+                                                         |     Problem         |
+                                                         +--------------------+
+                               ^
+                               |
+                               |
++-------------------+        +-------------------+  
+|     Problem       |        |     Main          |  
++-------------------+        +-------------------+  
+| - id: Long        |        | - userService:    |  
+| - title: String   |        |    UserService    |  
+| - category: String|        | - problemService: |  
+| - difficulty: String|      |    ProblemService |  
+| - link: String    |        |                   |  
++-------------------+        |                   |  
+| + getId(): Long   |        | + main(args: String[]): void |
+| + getTitle(): String       | + authenticateUser(): bool   |
+| + getCategory(): String    | + handleLogin(): bool        |
+| + getDifficulty(): String  | + handleRegister(): bool     |
++-------------------+        | + displayAllProblems(): void |
+                             | + displayProblemsByCategory()|
+                             | + displayRandomProblem(): void|
+                             +-------------------+  
